@@ -6,4 +6,3 @@
 
 [build.environment]
   PORT = "8000"  # Установите порт на Netlify (в данном случае 8000)
-
