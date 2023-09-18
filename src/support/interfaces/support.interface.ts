@@ -1,4 +1,4 @@
-import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
+import { TID } from '../../hotel-room/interfaces/hotel.room.interfaces';
 
 export interface ISupport {
   user: TID;

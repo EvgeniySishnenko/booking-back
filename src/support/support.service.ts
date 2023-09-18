@@ -1,9 +1,9 @@
 // import { Injectable } from '@nestjs/common';
 // import { InjectModel } from '@nestjs/mongoose';
 // import { Model } from 'mongoose';
-// import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
-// import { IFindSearchParams } from 'src/hotel/interfaces/find-search.params.interface';
-// import { User } from 'src/users/schemas/user.schemas';
+// import { TID } from '../hotel-room/interfaces/hotel.room.interfaces';
+// import { IFindSearchParams } from '../hotel/interfaces/find-search.params.interface';
+// import { User } from '../users/schemas/user.schemas';
 // import { CreateSupportRequestDto } from './dto/create.support.request.dto';
 // import { Message } from './schemas/message.schema';
 // import { SupportRequest } from './schemas/support.request .schema';

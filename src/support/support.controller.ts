@@ -9,13 +9,13 @@
 //   UseGuards,
 // } from '@nestjs/common';
 // import { EventEmitter2, OnEvent } from '@nestjs/event-emitter';
-// import { CurrentUser } from 'src/auth/decorators/current.user.decorator';
-// import { JwtAuthGuard } from 'src/auth/guards/jwt.auth.guard';
-// import { RolesGuard } from 'src/auth/guards/roles.guard';
-// import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
-// import { IFindSearchParams } from 'src/hotel/interfaces/find-search.params.interface';
-// import { Role } from 'src/users/enums/roles.enum';
-// import { User } from 'src/users/schemas/user.schemas';
+// import { CurrentUser } from '../auth/decorators/current.user.decorator';
+// import { JwtAuthGuard } from '../auth/guards/jwt.auth.guard';
+// import { RolesGuard } from '../auth/guards/roles.guard';
+// import { TID } from '../hotel-room/interfaces/hotel.room.interfaces';
+// import { IFindSearchParams } from '../hotel/interfaces/find-search.params.interface';
+// import { Role } from '../users/enums/roles.enum';
+// import { User } from '../users/schemas/user.schemas';
 // import { ChatGateway } from './chat.gateway';
 // import { ChartService } from './chat.service';
 // import { CreateSupportRequestDto } from './dto/create.support.request.dto';

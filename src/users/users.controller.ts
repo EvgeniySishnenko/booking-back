@@ -8,9 +8,9 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import { AuthService } from 'src/auth/auth.service';
-import { JwtAuthGuard } from 'src/auth/guards/jwt.auth.guard';
-import { RolesGuard } from 'src/auth/guards/roles.guard';
+import { AuthService } from '../auth/auth.service';
+import { JwtAuthGuard } from '../auth/guards/jwt.auth.guard';
+import { RolesGuard } from '../auth/guards/roles.guard';
 import { CreateUserDTO } from './dto/create-user.dto';
 import { Role } from './enums/roles.enum';
 import { ISearchParams } from './interfaces/search.params.interface';

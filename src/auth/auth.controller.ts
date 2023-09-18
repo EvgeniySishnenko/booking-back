@@ -1,18 +1,16 @@
 import {
   Body,
   Controller,
-  Get,
   Post,
   Req,
-  Res,
   UseGuards,
   UsePipes,
 } from '@nestjs/common';
-import { Response, Request } from 'express';
-import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
-import { ValidationPipe } from 'src/pipes/validation.pipe';
-import { CreateUserDTO } from 'src/users/dto/create-user.dto';
-import { User } from 'src/users/schemas/user.schemas';
+import { Request } from 'express';
+import { TID } from '../hotel-room/interfaces/hotel.room.interfaces';
+import { CreateUserDTO } from '../users/dto/create-user.dto';
+import { ValidationPipeCustom } from '../pipes/validation.pipe.custom';
+import { User } from '../users/schemas/user.schemas';
 import { AuthService } from './auth.service';
 import { CurrentUser } from './decorators/current.user.decorator';
 import { JwtAuthGuard } from './guards/jwt.auth.guard';
@@ -23,7 +21,7 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   @Post('/api/client/register')
-  @UsePipes(ValidationPipe)
+  @UsePipes(ValidationPipeCustom)
   async registration(@Body() registrationDTO: CreateUserDTO) {
     try {
       const user = await this.authService.registration(registrationDTO);

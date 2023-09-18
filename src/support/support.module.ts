@@ -1,6 +1,6 @@
 // import { Module } from '@nestjs/common';
 // import { MongooseModule } from '@nestjs/mongoose';
-// import { UsersModule } from 'src/users/users.module';
+// import { UsersModule } from '../users/users.module';
 // import { ChatGateway } from './chat.gateway';
 // import { ChartService } from './chat.service';
 // import { Message, MessageSchema } from './schemas/message.schema';

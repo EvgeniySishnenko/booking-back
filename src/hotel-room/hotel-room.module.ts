@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { HotelModule } from 'src/hotel/hotel.module';
+import { HotelModule } from '../hotel/hotel.module';
 import { HotelRoomController } from './hotel-room.controller';
 import { HotelRoomService } from './hotel-room.service';
 import { HotelRoom, HotelRoomSchema } from './schemas/hotelRoom.schemas';

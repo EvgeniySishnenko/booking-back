@@ -7,11 +7,11 @@ import {
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 
-import { CreateUserDTO } from 'src/users/dto/create-user.dto';
-import { UsersService } from 'src/users/users.service';
+import { CreateUserDTO } from '../users/dto/create-user.dto';
+import { UsersService } from '../users/users.service';
 import { LoginDTO } from './dto/login.dto';
-import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
-import { User } from 'src/users/schemas/user.schemas';
+import { TID } from '../hotel-room/interfaces/hotel.room.interfaces';
+import { User } from '../users/schemas/user.schemas';
 
 @Injectable()
 export class AuthService {
