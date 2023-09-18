@@ -1,9 +1,5 @@
 [build]
-  command = "npm run build" # Другие настройки сборки
-
-[dev]
   command = "npm run start:prod"  # Используйте вашу команду для запуска сервера
 
 [build.environment]
   PORT = "8000"  # Установите порт на Netlify (в данном случае 8000)
-
