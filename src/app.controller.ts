@@ -20,6 +20,6 @@ export class AppController {
   @UseGuards(JwtAuthGuard)
   @Post('/test')
   async test() {
-    return { msg: 'test' };
+    return { msg: 'test1' };
   }
 }
