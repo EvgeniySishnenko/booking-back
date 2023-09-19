@@ -1,7 +1,7 @@
 import { ArgumentMetadata, Injectable, PipeTransform } from '@nestjs/common';
 import { plainToClass } from 'class-transformer';
 import { validate } from 'class-validator';
-import { ValidationException } from 'src/exaptions/validation.exaption';
+import { ValidationException } from '../exaptions/validation.exaption';
 
 @Injectable()
 export class ValidationPipeCustom implements PipeTransform<any> {
