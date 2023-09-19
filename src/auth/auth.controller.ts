@@ -9,7 +9,7 @@ import {
 import { Request } from 'express';
 import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
 import { CreateUserDTO } from 'src/users/dto/create-user.dto';
-import { ValidationPipe } from 'src/pipes/validation.pipe';
+import { ValidationPipeCustom } from 'src/pipes/validation.pipe.custom';
 import { User } from 'src/users/schemas/user.schemas';
 import { AuthService } from './auth.service';
 import { CurrentUser } from './decorators/current.user.decorator';
@@ -21,7 +21,7 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   @Post('/api/client/register')
-  @UsePipes(ValidationPipe)
+  @UsePipes(ValidationPipeCustom)
   async registration(@Body() registrationDTO: CreateUserDTO) {
     try {
       const user = await this.authService.registration(registrationDTO);

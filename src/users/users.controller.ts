@@ -6,7 +6,7 @@ import {
   Query,
   UseGuards,
   UsePipes,
-  ValidationPipe,
+  ValidationPipeCustom,
 } from '@nestjs/common';
 import { AuthService } from 'src/auth/auth.service';
 import { JwtAuthGuard } from 'src/auth/guards/jwt.auth.guard';
@@ -26,7 +26,7 @@ export class UsersController {
   @UseGuards(new RolesGuard([Role.Admin, Role.Manager]))
   @UseGuards(JwtAuthGuard)
   @Post('/api/admin/users/')
-  @UsePipes(ValidationPipe)
+  @UsePipes(ValidationPipeCustom)
   async create(@Body() registrationDTO: CreateUserDTO) {
     try {
       const user = await this.authService.registration(registrationDTO);

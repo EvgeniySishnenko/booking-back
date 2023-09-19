@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/auth/guards/jwt.auth.guard';
 import { RolesGuard } from 'src/auth/guards/roles.guard';
-import { ValidationPipe } from 'src/pipes/validation.pipe';
+import { ValidationPipeCustom } from 'src/pipes/validation.pipe.custom';
 import { Role } from 'src/users/enums/roles.enum';
 import { AddHotelParamsDTO } from './dto/add.hotel.params.dto';
 import { UpdateHotelParamsDTO } from './dto/update.hotel.params.dto';
@@ -24,7 +24,7 @@ export class HotelController {
 
   @UseGuards(new RolesGuard([Role.Admin]))
   @UseGuards(JwtAuthGuard)
-  @UsePipes(ValidationPipe)
+  @UsePipes(ValidationPipeCustom)
   @Post('/api/admin/hotels')
   async addHotel(@Body() addHotelDTO: AddHotelParamsDTO) {
     try {
@@ -53,7 +53,7 @@ export class HotelController {
 
   @UseGuards(new RolesGuard([Role.Admin]))
   @UseGuards(JwtAuthGuard)
-  @UsePipes(ValidationPipe)
+  @UsePipes(ValidationPipeCustom)
   @Put('/api/admin/hotels/:id')
   async updateHotel(
     @Body() updateHotelParamsDTO: UpdateHotelParamsDTO,
