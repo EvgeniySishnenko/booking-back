@@ -24,7 +24,7 @@ export class HotelController {
 
   @UseGuards(new RolesGuard([Role.Admin]))
   @UseGuards(JwtAuthGuard)
-  // @UsePipes(ValidationPipe)
+  @UsePipes(ValidationPipe)
   @Post('/api/admin/hotels')
   async addHotel(@Body() addHotelDTO: AddHotelParamsDTO) {
     try {
@@ -53,7 +53,7 @@ export class HotelController {
 
   @UseGuards(new RolesGuard([Role.Admin]))
   @UseGuards(JwtAuthGuard)
-  // @UsePipes(ValidationPipe)
+  @UsePipes(ValidationPipe)
   @Put('/api/admin/hotels/:id')
   async updateHotel(
     @Body() updateHotelParamsDTO: UpdateHotelParamsDTO,
