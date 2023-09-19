@@ -1,17 +1,15 @@
 import {
   Body,
   Controller,
-  Get,
   Post,
   Req,
-  Res,
   UseGuards,
   UsePipes,
 } from '@nestjs/common';
-import { Response, Request } from 'express';
+import { Request } from 'express';
 import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
-import { ValidationPipe } from 'src/pipes/validation.pipe';
 import { CreateUserDTO } from 'src/users/dto/create-user.dto';
+import { ValidationPipe } from 'src/pipes/validation.pipe';
 import { User } from 'src/users/schemas/user.schemas';
 import { AuthService } from './auth.service';
 import { CurrentUser } from './decorators/current.user.decorator';
