@@ -18,7 +18,7 @@ import { CurrentUser } from 'src/auth/decorators/current.user.decorator';
 import { JwtAuthGuard } from 'src/auth/guards/jwt.auth.guard';
 import { RolesGuard } from 'src/auth/guards/roles.guard';
 import { IFindSearchParams } from 'src/hotel/interfaces/find-search.params.interface';
-import { ValidationPipe } from 'src/pipes/validation.pipe';
+// import { ValidationPipe } from 'src/pipes/validation.pipe';
 import { Role } from 'src/users/enums/roles.enum';
 import { User } from 'src/users/schemas/user.schemas';
 import { CreateHotelRoomDTo } from './dto/create.hotel.room.dto';
@@ -26,7 +26,6 @@ import { UpdateHotelRoomDTO } from './dto/update.hotel.room.dto';
 import { CheckAuthGuard } from './guards/check.auth.guard';
 import { HotelRoomService } from './hotel-room.service';
 import { TID } from './interfaces/hotel.room.interfaces';
-import { HotelRoom } from './schemas/hotelRoom.schemas';
 import { saveImagesToStorage } from './utils/save.images..to.storage';
 
 @Controller('hotel-room')
@@ -35,7 +34,7 @@ export class HotelRoomController {
 
   @UseGuards(new RolesGuard([Role.Admin]))
   @UseGuards(JwtAuthGuard)
-  @UsePipes(ValidationPipe)
+  // @UsePipes(ValidationPipe)
   @Post('/api/admin/hotel-rooms')
   @UseInterceptors(FilesInterceptor('file', 10, saveImagesToStorage))
   async create(@UploadedFiles() file, @Body() data: CreateHotelRoomDTo) {
@@ -66,7 +65,7 @@ export class HotelRoomController {
 
   @UseGuards(new RolesGuard([Role.Admin]))
   @UseGuards(JwtAuthGuard)
-  @UsePipes(ValidationPipe)
+  // @UsePipes(ValidationPipe)
   @Put('/api/admin/hotel-rooms/:id')
   @UseInterceptors(FilesInterceptor('file', 10, saveImagesToStorage))
   async update(
