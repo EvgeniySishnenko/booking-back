@@ -2,8 +2,8 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import * as mongoose from 'mongoose';
 import { ISupport } from '../interfaces/support.interface';
-import { User } from '../users/schemas/user.schemas';
-import { TID } from '../hotel-room/interfaces/hotel.room.interfaces';
+import { User } from '../../users/schemas/user.schemas';
+import { TID } from '../../hotel-room/interfaces/hotel.room.interfaces';
 import { Message } from './message.schema';
 
 @Schema()
