@@ -9,10 +9,10 @@ import {
   UseGuards,
   UsePipes,
 } from '@nestjs/common';
-import { JwtAuthGuard } from 'src/auth/guards/jwt.auth.guard';
-import { RolesGuard } from 'src/auth/guards/roles.guard';
+import { JwtAuthGuard } from '../auth/guards/jwt.auth.guard';
+import { RolesGuard } from '../auth/guards/roles.guard';
 import { ValidationPipeCustom } from '../pipes/validation.pipe.custom';
-import { Role } from 'src/users/enums/roles.enum';
+import { Role } from '../users/enums/roles.enum';
 import { AddHotelParamsDTO } from './dto/add.hotel.params.dto';
 import { UpdateHotelParamsDTO } from './dto/update.hotel.params.dto';
 import { HotelService } from './hotel.service';

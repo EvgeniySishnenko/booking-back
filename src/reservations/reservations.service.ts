@@ -7,11 +7,11 @@ import {
 } from '@nestjs/common';
 import { InjectConnection, InjectModel } from '@nestjs/mongoose';
 import { Connection, Model } from 'mongoose';
-import { HotelRoomService } from 'src/hotel-room/hotel-room.service';
-import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
-import { HotelRoom } from 'src/hotel-room/schemas/hotelRoom.schemas';
-import { Role } from 'src/users/enums/roles.enum';
-import { User } from 'src/users/schemas/user.schemas';
+import { HotelRoomService } from '../hotel-room/hotel-room.service';
+import { TID } from '../hotel-room/interfaces/hotel.room.interfaces';
+import { HotelRoom } from '../hotel-room/schemas/hotelRoom.schemas';
+import { Role } from '../users/enums/roles.enum';
+import { User } from '../users/schemas/user.schemas';
 import { ReservationDto } from './dto/reservation.dto';
 import { Reservations } from './schemas/reservations.schemas';
 

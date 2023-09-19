@@ -3,12 +3,12 @@ import { InjectConnection, InjectModel } from '@nestjs/mongoose';
 import { Connection, Model } from 'mongoose';
 import * as mongoose from 'mongoose';
 import { HotelRoom } from './schemas/hotelRoom.schemas';
-import { HotelService } from 'src/hotel/hotel.service';
+import { HotelService } from '../hotel/hotel.service';
 import { CreateHotelRoomDTo } from './dto/create.hotel.room.dto';
 import { off } from 'process';
 import { UpdateHotelRoomDTO } from './dto/update.hotel.room.dto';
-import { User } from 'src/users/schemas/user.schemas';
-import { Role } from 'src/users/enums/roles.enum';
+import { User } from '../users/schemas/user.schemas';
+import { Role } from '../users/enums/roles.enum';
 
 @Injectable()
 export class HotelRoomService {

@@ -1,10 +1,10 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import * as mongoose from 'mongoose';
-import { User } from 'src/users/schemas/user.schemas';
-import { Hotel } from 'src/hotel/schemas/hotel.schemas';
-import { HotelRoom } from 'src/hotel-room/schemas/hotelRoom.schemas';
-import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
+import { User } from '../users/schemas/user.schemas';
+import { Hotel } from '../hotel/schemas/hotel.schemas';
+import { HotelRoom } from '../hotel-room/schemas/hotelRoom.schemas';
+import { TID } from '../hotel-room/interfaces/hotel.room.interfaces';
 import { IReservation } from '../interfaces/reservations.interface';
 
 @Schema({ timestamps: true })

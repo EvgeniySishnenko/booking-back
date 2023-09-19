@@ -7,14 +7,14 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { JwtAuthGuard } from 'src/auth/guards/jwt.auth.guard';
-import { CurrentUser } from 'src/auth/decorators/current.user.decorator';
-import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
-import { User } from 'src/users/schemas/user.schemas';
+import { JwtAuthGuard } from '../auth/guards/jwt.auth.guard';
+import { CurrentUser } from '../auth/decorators/current.user.decorator';
+import { TID } from '../hotel-room/interfaces/hotel.room.interfaces';
+import { User } from '../users/schemas/user.schemas';
 import { ReservationDto } from './dto/reservation.dto';
 import { ReservationsService } from './reservations.service';
-import { Role } from 'src/users/enums/roles.enum';
-import { RolesGuard } from 'src/auth/guards/roles.guard';
+import { Role } from '../users/enums/roles.enum';
+import { RolesGuard } from '../auth/guards/roles.guard';
 
 @Controller('reservations')
 export class ReservationsController {

@@ -7,10 +7,10 @@ import {
   UsePipes,
 } from '@nestjs/common';
 import { Request } from 'express';
-import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
-import { CreateUserDTO } from 'src/users/dto/create-user.dto';
+import { TID } from '../hotel-room/interfaces/hotel.room.interfaces';
+import { CreateUserDTO } from '../users/dto/create-user.dto';
 import { ValidationPipeCustom } from '../pipes/validation.pipe.custom';
-import { User } from 'src/users/schemas/user.schemas';
+import { User } from '../users/schemas/user.schemas';
 import { AuthService } from './auth.service';
 import { CurrentUser } from './decorators/current.user.decorator';
 import { JwtAuthGuard } from './guards/jwt.auth.guard';

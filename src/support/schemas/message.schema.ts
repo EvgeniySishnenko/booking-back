@@ -2,8 +2,8 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import * as mongoose from 'mongoose';
 import { IMessage } from '../interfaces/support.interface';
-import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
-import { User } from 'src/users/schemas/user.schemas';
+import { TID } from '../hotel-room/interfaces/hotel.room.interfaces';
+import { User } from '../users/schemas/user.schemas';
 
 @Schema()
 export class Message extends Document implements IMessage {

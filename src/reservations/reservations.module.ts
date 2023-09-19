@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { HotelRoomModule } from 'src/hotel-room/hotel-room.module';
-import { HotelModule } from 'src/hotel/hotel.module';
-import { UsersModule } from 'src/users/users.module';
+import { HotelRoomModule } from '../hotel-room/hotel-room.module';
+import { HotelModule } from '../hotel/hotel.module';
+import { UsersModule } from '../users/users.module';
 import { ReservationsController } from './reservations.controller';
 import { ReservationsService } from './reservations.service';
 import {

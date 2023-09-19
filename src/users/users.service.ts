@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectConnection, InjectModel } from '@nestjs/mongoose';
 import { Connection, Model } from 'mongoose';
-import { TID } from 'src/hotel-room/interfaces/hotel.room.interfaces';
+import { TID } from '../hotel-room/interfaces/hotel.room.interfaces';
 import { CreateUserDTO } from './dto/create-user.dto';
 import { ISearchParams } from './interfaces/search.params.interface';
 import { User, UserDocument } from './schemas/user.schemas';
