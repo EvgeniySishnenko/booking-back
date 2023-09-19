@@ -18,7 +18,7 @@ import { CurrentUser } from 'src/auth/decorators/current.user.decorator';
 import { JwtAuthGuard } from 'src/auth/guards/jwt.auth.guard';
 import { RolesGuard } from 'src/auth/guards/roles.guard';
 import { IFindSearchParams } from 'src/hotel/interfaces/find-search.params.interface';
-import { ValidationPipeCustom } from 'src/pipes/validation.pipe.custom';
+import { ValidationPipeCustom } from '../pipes/validation.pipe.custom';
 import { Role } from 'src/users/enums/roles.enum';
 import { User } from 'src/users/schemas/user.schemas';
 import { CreateHotelRoomDTo } from './dto/create.hotel.room.dto';

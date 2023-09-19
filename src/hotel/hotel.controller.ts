@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/auth/guards/jwt.auth.guard';
 import { RolesGuard } from 'src/auth/guards/roles.guard';
-import { ValidationPipeCustom } from 'src/pipes/validation.pipe.custom';
+import { ValidationPipeCustom } from '../pipes/validation.pipe.custom';
 import { Role } from 'src/users/enums/roles.enum';
 import { AddHotelParamsDTO } from './dto/add.hotel.params.dto';
 import { UpdateHotelParamsDTO } from './dto/update.hotel.params.dto';
