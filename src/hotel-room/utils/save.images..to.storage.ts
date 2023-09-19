@@ -5,7 +5,7 @@ const validMimeTypes = ['image/png', 'image/jpg', 'image/jpeg'];
 
 export const saveImagesToStorage = {
   storage: diskStorage({
-    destination: './public/images',
+    destination: '/tmp/uploads',
     filename: (req, file, cb) => {
       const fileExtension: string = file.originalname;
       const fileName = uuidv4() + fileExtension;
