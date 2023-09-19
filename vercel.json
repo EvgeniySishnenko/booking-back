@@ -3,8 +3,7 @@
   "builds": [
     {
       "src": "src/main.ts",
-      "use": "@vercel/node",
-      "files": ["src/pipes/validation.pipe.ts"]
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -13,6 +12,5 @@
       "dest": "src/main.ts",
       "methods": ["GET", "POST", "PUT", "DELETE"]
     }
-  ],
-  "files": ["src"]
+  ]
 }
